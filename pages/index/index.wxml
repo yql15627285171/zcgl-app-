@@ -1,0 +1,37 @@
+<view class="wraper">
+  <view class="header">
+    <text class="little name">深圳市航天泰瑞捷电子有限公司</text>
+    <text class="little name">Techrise Electronics Co.,Ltd. </text>
+    <text class="big name">固定资产查询系统</text>
+    <view class="logo">
+      <image src="../../image/trjz.png" class="logoImage"></image>
+    </view>
+  </view>
+  <view class="body">
+    <view class="userName">
+      <view class="userPic"> 
+        <image src="../../image/user.png" class="userImage"></image>
+      </view> 
+      <input class="userInput" type="number" bindblur="userName"/>
+    </view>
+
+    <view class="password">
+      <view class="passPic">
+        <image src="../../image/password.png" class="passImage"></image>
+      </view>
+      <input password class="passInput" bindblur="password"/>
+    </view>
+
+       <button bindtap="login">登录</button>   
+      <!-- <button bindtap="test">登录</button>   -->
+
+    <!-- <view class="text">没有账号?注册</view> -->
+    
+
+    <!-- <view class="weixin">
+      <image src="../../image/weixin.png" class="lastImage"></image>
+    </view> -->
+  </view>
+
+  <view class="">{{test}}</view>
+</view>

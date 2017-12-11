@@ -1,0 +1,11 @@
+<view>
+<block wx:for="{{list}}">
+  <view class='list' bindtap='showSearch' data-index='{{index}}'>
+    <text>{{item[0]}}</text>
+    <text>{{item[10]}}</text>
+    <text>{{item[11]}}</text>
+    <text>{{item[1]}}</text> 
+    <image src='../../image/more.png'></image>
+  </view>
+</block>
+</view>

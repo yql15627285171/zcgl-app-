@@ -1,0 +1,15 @@
+<view>
+  <view class='line' bindtap='getFouces' data-index='1'>
+    <text>旧密码</text>
+    <input password focus='{{focus1}}' bindinput='valueChange1' data-type='old1'></input>
+  </view>
+  <view class='line' bindtap='getFouces' data-index='2' >
+    <text>新密码</text>
+    <input password focus='{{focus2}}' bindinput='valueChange2' data-type='old2'></input>
+  </view>
+  <view class='line' bindtap='getFouces' data-index='3'>
+    <text>新密码</text>
+    <input password focus='{{focus3}}' bindinput='valueChange3' data-type='new'></input>
+  </view>
+  <button type='primary' bindtap='sureChange'>确定修改</button>
+</view>

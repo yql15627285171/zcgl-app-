@@ -1,0 +1,27 @@
+page{
+  background-color: #f0f0f0;
+}
+
+.info{
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin:20rpx 0;
+  background-color: #ffffff;
+  color: #999;
+  font-size: 16px;
+}
+.info text{
+  margin:0 20rpx;
+}
+
+.info image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.btn{
+  margin-top: 80rpx;
+}

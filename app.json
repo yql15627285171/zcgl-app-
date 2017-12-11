@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/index/index",
+    "pages/scanInfo/scanInfo",
+    "pages/enquire/enquire",
+    "pages/setting/setting",
+    "pages/condition/condition",
+    "pages/searchList/searchList",
+    "pages/resetPsd/resetPsd"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#1afa29",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "功能",
+        "iconPath": "image/unselect_function.png",
+        "selectedIconPath": "image/select_function.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "设置",
+        "iconPath": "image/unselect_setting.png",
+        "selectedIconPath": "image/select_setting.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 15000,
+    "uploadFile": 15000
+  }
+}

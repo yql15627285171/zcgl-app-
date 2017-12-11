@@ -1,0 +1,40 @@
+<!-- <view class="header">
+  <view class="checkView">
+  <image src="../../image/enquire.png" class="enquireImg"></image>
+  <input class='numInput' placeholder="搜索编号" focus type="number" confirm-type="search" placeholder-class="placeholder" bindblur="valueChange"/>
+  </view>
+  <view class="search" bindtap="searchInfo">搜索</view>
+</view>
+<view class='space'></view> -->
+<view class='body'>
+  <view class='con-line'>
+    <text>设备编号</text>
+    <input type='number' class='numberInput' bindinput='valueChange' data-type='number'></input>
+  </view>
+  <view class='con-line'>
+    <text>负责人</text>
+    <input class='personInput' bindinput='valueChange' data-type='person' ></input>
+  </view>
+  <view class='con-line'>
+    <text>当前部门</text>
+    <view class='chose' bindtap='showAlert' data-level='2'>{{choseLevel2}}</view>
+  </view>
+  <view class='con-line'>
+  <text>当前中心</text>
+  <view class='chose' bindtap='showAlert' data-level='1'>{{choseLevel1}}</view>
+  </view>
+  <!-- <view class='con-line'> -->
+  <button type='primary' bindtap='search'>条件搜索</button>
+  <button type='warn' bindtap='scanSearch'>扫码搜索</button>
+  <!-- </view> -->
+</view>
+
+  <!--弹出层  -->
+  <!--弹出背景层  -->
+  <view class="alertBG" wx:if="{{showBG}}" catchtouchstart="disappear" ></view>
+  <scroll-view class="alertPlace" wx:if="{{showPlace}}" scroll-y>
+    <block class="" wx:for="{{info}}">
+        <view class="place" data-index="{{index}}" bindtap="choiceItem">{{item}}</view>
+    </block>
+    <view class="cancelBtn" catchtouchstart="disappear">取消</view>
+  </scroll-view>

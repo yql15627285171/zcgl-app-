@@ -1,0 +1,16 @@
+page{
+  background-color: #f0f0f0;
+}
+
+.line{
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  font-size: 16px;
+  margin: 60rpx 0;
+  height: 80rpx;
+}
+
+text{
+  margin: 0 30rpx;
+}

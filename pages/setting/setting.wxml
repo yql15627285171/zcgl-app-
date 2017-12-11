@@ -1,0 +1,14 @@
+<view class="info">
+  <text>姓名:</text>
+  <text>{{name}}</text>
+</view>
+<view class="info">
+  <text>工号:</text>
+  <text>{{num}}</text>
+</view>
+<view class="info" bindtap='resetPsd'>
+  <text>修改密码</text>
+  <image src="../../image/more.png"></image>
+</view>
+
+<button type="warn" class="btn" bindtap="logOut">退出登录</button>

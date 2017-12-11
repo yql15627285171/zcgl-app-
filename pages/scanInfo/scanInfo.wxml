@@ -1,0 +1,52 @@
+<!--scanInfo.wxml-->
+<view class="wraper" wx:if="finishLoad">
+<!--头部header  -->
+  <view class="header">
+    <view class="header-left">
+       <image src="{{picUrl}}" class="eqv-image" wx:if="{{!showDefaultPic}}"></image>  
+      <image src="../../image/defaultImg.png" class="eqv-image" wx:if="{{showDefaultPic}}"></image>
+
+      <image src="../../image/camera.png" class="camera" bindtap="takePhoto"></image>
+    </view>
+    <view class="header-right">
+      <button type="primary" class="sureBtn" bindtap="sureUpload" disabled="{{notPress}}" dis>确认上传</button>
+    </view>
+  </view>
+
+
+<!--设备信息body  -->
+ <view class="info edit-view" bindtap="showAlert">
+      <text>{{place}}</text>
+</view>
+<view class="info edit-view" bindtap="choiceState">
+  <text>{{state}}</text>
+</view>
+<view>
+</view>
+ <view class="info edit-view person" bindtap='getFocus'>
+  <view>
+    <text>负责人: </text>
+    <input value='{{person}}' placeholder="请输入负责人" focus='{{peronFocus}}' bindinput="valueOfPersonChange" confirm-hold ></input>
+  </view>
+  <image src='../../image/edit.png' class='edit'></image>
+</view> 
+
+<block wx:for="{{details_info}}" wx:key="*this">
+  <view class="info">
+  <text>{{item}}</text>
+</view>
+</block>
+
+   <!--弹出层  -->
+  <!--弹出背景层  -->
+  <view class="alertBG" wx:if="{{showBG}}" catchtouchstart="disappear" ></view>
+  <scroll-view class="alertPlace" wx:if="{{showPlace}}" scroll-y>
+    <block class="" wx:for="{{place_info}}">
+        <view class="place" data-index="{{index}}" bindtap="choicePlace">{{item}}</view>
+    </block>
+    <view class="cancelBtn" catchtouchstart="disappear">取消</view>
+  </scroll-view>
+
+  
+</view>
+ 

@@ -1,0 +1,7 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarTitleText": "机器检测",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#465064",
+  "enablePullDownRefresh":true
+}

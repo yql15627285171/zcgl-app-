@@ -1,0 +1,7 @@
+<!--main.wxml-->
+<view class="wrapper">
+  <button type="primary" class="scan" bindtap="scan" disabled='{{canScan}}'>扫码盘点</button>
+  <button type="warn" class="equipment" bindtap="equipmentCheck">设备查询</button>
+  <button class="histroy" bindtap="checkHistroy">历史操作</button>
+   <button class="loginWeb" bindtap="loginWeb" wx:if="{{administor}}">扫码登录</button> 
+</view>

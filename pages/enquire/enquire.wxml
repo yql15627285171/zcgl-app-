@@ -1,0 +1,81 @@
+<!--enquire.wxml-->
+<!--搜索框设置  -->
+<!-- <view class="header">
+  <view class="checkView">
+  <image src="../../image/enquire.png" class="enquireImg"></image>
+  <input placeholder="搜索编号" focus type="number" confirm-type="search" placeholder-class="placeholder" bindblur="valueChange"/>
+  </view>
+  <view class="search" bindtap="searchInfo">搜索</view>
+</view> -->
+<!--显示查询内容类容  -->
+
+
+<!--查询设备信息  -->
+<block wx:if="{{searchType  == 'equip'}}">
+<view wx:if="{{finishLoading}}" class="equipment_imageView">
+  <!-- <image src="../../image/example.jpg"></image> -->
+  <block wx:if="{{picUrl.length>0}}">
+   <image src="{{picUrl}}" ></image>
+  </block>
+  <block wx:if="{{picUrl.length==0}}">
+    <image src="../../image/defaultImg.png"></image>
+  </block>
+  
+</view>
+<view wx:for="{{equipment_info}}" wx:key="*this" class="equipment">
+  <text>{{item}}</text>
+</view>
+</block>
+
+
+
+
+<!--查询历史操作  -->
+<block wx:if="{{searchType == 'histroy'}}">
+<!-- <view class="histroy" wx:for="{{histroy_info}}" wx:key="time">
+  <text>{{item.person}}</text>
+  <text>{{item.time}}</text>
+</view> -->
+<block wx:for="{{histroy_info}}" wx:key="time" >
+
+  <view class="histroy" wx:if="{{item.time!=''}}">
+  <!--时间  -->
+    <view class="time">
+      <image src="../../image/time.png"></image>
+      <text>{{item.time}}</text>
+    </view>
+  <!--地点  -->
+    <view class="place">
+      <image src="../../image/place.png"></image>
+      <text>{{item.place}}</text>
+    </view>
+  <!--责任人  -->
+    <view class="person">
+      <image src="../../image/person.png"></image>
+      <text>{{item.person}}</text>
+    </view>
+  <!--使用状态  -->
+    <view class="state">
+      <block wx:if="{{item.state=='在用'}}">
+      <image src="../../image/using.png"></image>
+      </block>
+      <block wx:if="{{item.state=='维修'}}">
+      <image src="../../image/using.png"></image>
+      </block>
+       <block wx:if="{{item.state=='废弃'}}">
+      <image src="../../image/abandon.png"></image>
+      </block>
+      <text>{{item.state}}</text>
+      <!-- <block wx:if="{{item.state==true}}">
+        <image src="../../image/using.png"></image>
+        <text>在用</text>
+      </block>
+      <block wx:if="{{item.state==false}}">
+        <image src="../../image/abandon.png"></image>
+        <text>废弃</text>
+      </block> -->
+    </view>
+  </view>
+</block>
+
+</block>
