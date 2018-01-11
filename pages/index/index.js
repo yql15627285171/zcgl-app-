@@ -143,21 +143,17 @@ Page({
 
   // 调试用的接口helloword
   // test:function(){
-  
-  //   var evalue = app.Encrypt()
-   
-  //   console.log(evalue)
-  //   wx.request({
-  //     url: 'https://www.stsidea.com/weixin.asmx/HelloWorld',
-  //     data:{
-  //       evalue: evalue
-  //     },
-  //     header: { 'content-type': 'application/x-www-form-urlencoded' },
-  //     method: "POST",
-  //     dataType: 'json',
-  //     success: function(res) {
+  //   var params = {
+  //     evalue :app.Encrypt()
+  //   }
+
+  //   http.POST(api.test,params,{
+  //     success:function(res){
   //       console.log(res.data)
   //     },
+  //     fali:function(res){
+
+  //     }
   //   })
   // },
 

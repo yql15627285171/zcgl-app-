@@ -96,33 +96,55 @@ Page({
         // 将结果变成数组
         var result = res.data.replace(/<[^>]+>/g, "").replace(/[\r\n]/g, "").split(",")
         console.log(result);
-        that.setData({
-          finishLoad:true,
-          result: result,
-          place: '存档地点: ' + result[13],//存档地点
-          state: '使用状态: ' + result[17],//使用状态
-          person: result[10],//负责人
-          details_info: [
-            '资产编号: ' + result[0],//资产编号
-            '设备名称: ' + result[1],//设备名称
-            '品牌: ' + result[2],//品牌
-            '型号: ' + result[3],//型号
-            '规格: ' + result[4],//规格
-            '出厂编号: ' + result[5],//出厂编号
-            '行政部门编号: ' + result[6],//行政部门编号
-            '序列号: ' + result[7],//序列号
-            '资产原值: ' + result[8],//资产原值
-            '购置日期:  ' + result[9],//购置日期
-            // '负责人: ' + result[10],//负责人            
-            '当前中心: ' + result[11],//当前中心
-            '使用部门: ' + result[12],//部门
-            '生产厂家:  ' + result[14],//生产厂家
-            '国产/进口: ' + result[15],//国产/进口
-            '附属设备或配置: ' + result[16],//附属设备或配置
-            '备注: ' + result[18],//备注
-          ],
-        
-        })
+
+        if(result.length==1){
+          // 扫描没有结果的时候
+          wx.showModal({
+            title: '提示',
+            content: '不存在改设备',
+            success: function (res) {
+              if (res.confirm) {
+                wx.navigateBack({
+                  delta: 1,
+                })
+              } else if (res.cancel) {
+                wx.navigateBack({
+                  delta: 1,
+                })
+              }
+            }
+          })
+        }else{
+          that.setData({
+            finishLoad: true,
+            result: result,
+            place: '存档地点: ' + result[13],//存档地点
+            state: '使用状态: ' + result[17],//使用状态
+            person: result[10],//负责人
+            details_info: [
+              '资产编号: ' + result[0],//资产编号
+              '设备名称: ' + result[1],//设备名称
+              '品牌: ' + result[2],//品牌
+              '型号: ' + result[3],//型号
+              '规格: ' + result[4],//规格
+              '出厂编号: ' + result[5],//出厂编号
+              '行政部门编号: ' + result[6],//行政部门编号
+              '序列号: ' + result[7],//序列号
+              '资产原值: ' + result[8],//资产原值
+              '购置日期:  ' + result[9],//购置日期
+              // '负责人: ' + result[10],//负责人            
+              '当前中心: ' + result[11],//当前中心
+              '使用部门: ' + result[12],//部门
+              '生产厂家:  ' + result[14],//生产厂家
+              '国产/进口: ' + result[15],//国产/进口
+              '附属设备或配置: ' + result[16],//附属设备或配置
+              '备注: ' + result[18],//备注
+            ],
+
+          })
+        }
+
+
       },
       fail:function(res){
         that.endLoading('服务器阻塞，请下拉刷新')
@@ -365,9 +387,6 @@ Page({
     this.downloadImage(this.data.num)
 
   },
-
-
-
 
 
 
