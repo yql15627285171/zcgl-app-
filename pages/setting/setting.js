@@ -50,12 +50,21 @@ Page({
 
   // 修改密码
   resetPsd:function(){
-    wx.navigateTo({
-      url: '../resetPsd/resetPsd',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
-    })
+    var user = wx.getStorageSync('user')
+    if (user == '876'){
+      wx.showModal({
+        title: '提示',
+        content: '改账户不能修改密码',
+      })
+    }else{
+      wx.navigateTo({
+        url: '../resetPsd/resetPsd',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    }
+    
   }
 
  

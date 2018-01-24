@@ -24,8 +24,8 @@
 <view>
 </view>
  <view class="info edit-view person" bindtap='getFocus'>
-  <view>
-    <text>负责人: </text>
+  <view class='person-view'>
+    <view>负责人: </view>
     <input value='{{person}}' placeholder="请输入负责人" focus='{{peronFocus}}' bindinput="valueOfPersonChange" confirm-hold ></input>
   </view>
   <image src='../../image/edit.png' class='edit'></image>

@@ -112,8 +112,15 @@ button{
   text-align: center;
   background: #fff;
   margin: 2rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .cancelBtn{
   margin-top: 20rpx;
 }
+
+/* .item-list{
+  font-size: 2rpx;
+} */

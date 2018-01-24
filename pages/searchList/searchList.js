@@ -7,7 +7,6 @@ Page({
    */
   data: {
     list:null,
-
   },
 
   // 网络请求
@@ -62,6 +61,7 @@ Page({
   // 跳转到下一个页面
   showSearch(event){
     var index = parseInt(event.currentTarget.dataset.index);
+    console.log(this.data.list[index])
     // 要传递到下一个界面的数组
     var model = JSON.stringify(this.data.list[index])
     wx.navigateTo({

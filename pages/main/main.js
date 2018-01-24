@@ -24,6 +24,7 @@ Page({
   //  判断是否已经进行过登录操作
   // 如果不是则进行登录
     if (!login){
+      // 包含87用户判断在此方法
       this.login();
     }else{
       if(wx.getStorageSync("startTask") == '1'){
@@ -38,8 +39,9 @@ Page({
         })
       }
       // console.log(this.data.canScan)
-    }
-    
+      // 876用户判断
+      this.judge876User(); 
+    }  
 
     
   },
@@ -160,6 +162,8 @@ Page({
           
 
             // console.log(that.data.canScan)
+            // 876用户判断
+            that.judge876User(); 
 
 
           }else{
@@ -279,6 +283,18 @@ Page({
       },
       complete: function(res) {},
     })
+  },
+
+  /**
+   * 如果user等于876，则没有扫描权限
+   */
+  judge876User:function(){
+    var user = wx.getStorageSync('user')
+    if(user == '876'){
+      this.setData({
+        canScan: true //false能扫，true不能扫
+      })
+    }
   },
 
   /**

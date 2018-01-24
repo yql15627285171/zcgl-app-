@@ -19,10 +19,10 @@
     <text>当前部门</text>
     <view class='chose' bindtap='showAlert' data-level='2'>{{choseLevel2}}</view>
   </view>
-  <view class='con-line'>
+  <!-- <view class='con-line'>
   <text>当前中心</text>
   <view class='chose' bindtap='showAlert' data-level='1'>{{choseLevel1}}</view>
-  </view>
+  </view> -->
   <!-- <view class='con-line'> -->
   <button type='primary' bindtap='search'>条件搜索</button>
   <button type='warn' bindtap='scanSearch'>扫码搜索</button>

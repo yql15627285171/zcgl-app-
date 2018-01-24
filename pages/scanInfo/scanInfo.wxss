@@ -52,17 +52,24 @@ page{
 }
 
 .edit-view{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   color: black;
 }
 
-.person view{
+.person{
+   display: flex; 
+   justify-content: space-between; 
+   align-items: center;  
+}
+
+.person-view{
   display:flex;
   align-items: center;
-  width: 80%
 }
+
+.person-view view{
+  width: 80px;
+}
+
 
 
 .edit{

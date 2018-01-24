@@ -123,6 +123,7 @@ Page({
   searchEquipment: function (model) {
 
         var result = model
+      
         this.setData({
           equipment_info: [
             '资产编号: ' + result[0],//资产编号

@@ -95,6 +95,7 @@ Page({
         that.endLoading("加载成功");
         // 将结果变成数组
         var result = res.data.replace(/<[^>]+>/g, "").replace(/[\r\n]/g, "").split(",")
+        console.log("扫描结果")
         console.log(result);
 
         if(result.length==1){

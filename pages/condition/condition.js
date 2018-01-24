@@ -150,15 +150,19 @@ Page({
     }
     this.disappear();
   },
-// 输入框内容改变
+  /**
+   * 输入框内容改变
+   * 负责人与设备编号
+   */
+ 
   valueChange(event){
     if (event.currentTarget.dataset.type == 'number'){
         this.setData({
-          assetNo: event.detail.value
+          assetNo: event.detail.value.trim()
         })
     } else if (event.currentTarget.dataset.type == 'person'){
       this.setData({
-        keeperName: event.detail.value
+        keeperName: event.detail.value.trim()
       })
     }
   },
